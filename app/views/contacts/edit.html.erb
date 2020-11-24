@@ -1,0 +1,17 @@
+<%= form_for @Contact, url:{action: "update"} do|e| %>
+<p>
+	<%= e.label :Name %>
+	<%= e.text_field :Name %>
+</p>
+<p>
+ 	<%= e.label :Email %>
+	<%= e.text_field :Email %>
+</p>
+<p>
+	<%= e.label :Message %>
+	<%= e.text_area :Message %>
+</p>
+<%= e.submit("Update")%>
+<% end %>
+
+

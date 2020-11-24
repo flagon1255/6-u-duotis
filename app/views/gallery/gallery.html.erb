@@ -1,0 +1,14 @@
+<h1>Gallery</h1>
+<div class="row">
+
+ 
+<% @images.each do |s| %>
+<%puts s%>
+
+  <div class="column">
+  <a target="_blank">
+    <%= image_tag(s)%>
+  </a>
+</div>
+  <% end %>
+</div>

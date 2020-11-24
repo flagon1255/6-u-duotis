@@ -1,0 +1,18 @@
+<%= form_for @Contact, url:{action: "create"} do|f| %>
+<p>
+	<%= f.label :Name %>
+	<%= f.text_field :Name %>
+</p>
+<p>
+ 	<%= f.label :Email %>
+	<%= f.text_field :Email %>
+</p>
+<p>
+	<%= f.label :Message %>
+	<%= f.text_area :Message %>
+</p>
+
+<%= f.submit("Submit") %>
+
+
+<% end %>
