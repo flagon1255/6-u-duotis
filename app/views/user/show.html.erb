@@ -1,0 +1,14 @@
+<%= form_for @User, url:{action: "Login"} do|f| %>
+<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</p>
+<p>
+ 	<%= f.label :password %>
+	<%= f.text_field :password %>
+</p>
+
+
+<%= f.submit("Login") %>
+
+<% end %>

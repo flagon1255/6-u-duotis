@@ -10,4 +10,13 @@ As technology evolves, in a relentless search for speed, efficiency and ease of 
 		@Text1 = 'Many people forget the difference between a classic car and an old car. In my opinion, when it comes to a classic vehicle, the way it makes you feel, outweighs all its faults. It has to be more than the sum of all its parts. A classic car has character, personality, it has human qualities.'
 
 	end
+
+
+
+
+	  def destroy      
+    session[:user_id] = nil     
+    redirect_to '/' 
+  	end  
+
 end

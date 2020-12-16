@@ -1,6 +1,21 @@
 <h1><%= @Title %></h1>
+
 <p> <%= @Text1 %></p>
 <div class="image">
   <%= image_tag('D:\FirstApp\app\assets\images\single\10.jpg')%>
 
 </div>
+
+<footer>
+<% if session[:user_id].nil? %>
+  <div id="welcomebuttons">
+  	  <a href="Register">Register</a>
+      <a href="Login">Login</a>
+      <% else %>
+      <% @user=User.find(session[:user_id]) %>
+      <p> Logged in  as :<%=@user.name %></p>
+      <%= link_to "Log out",:controller => :navigate, :action => :destroy %>
+  </div>
+
+<% end %>
+</footer>
